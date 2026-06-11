@@ -1,8 +1,8 @@
 // ==========================================
-// CHAPTER 35 - 38: FUNCTIONS
+// CHAPTER 35 - 38: FUNCTIONS (FULLY FIXED CODE 1-14)
 // ==========================================
 
-// --- Question 1: Function to display current date & time ---
+// --- Question 1: Current Date & Time ---
 document.write("<h3>Question 1: Current Date via Function</h3>");
 function displayCurrentDateTime() {
     var now = new Date();
@@ -11,7 +11,7 @@ function displayCurrentDateTime() {
 displayCurrentDateTime();
 
 
-// --- Question 2: Function to greet user with full name ---
+// --- Question 2: Greeting Function ---
 document.write("<h3>Question 2: Greeting Function</h3>");
 function greetUser(first, last) {
     var fullName = first + " " + last;
@@ -22,7 +22,7 @@ var lNameInput = prompt("Enter last name for function greeting:");
 greetUser(fNameInput, lNameInput);
 
 
-// --- Question 3: Function to add two numbers and return result ---
+// --- Question 3: Addition Return Function ---
 document.write("<h3>Question 3: Addition Return Function</h3>");
 function addNumbers(num1, num2) {
     return num1 + num2;
@@ -33,7 +33,7 @@ var sumResult = addNumbers(val1, val2);
 document.write("The sum of " + val1 + " and " + val2 + " is: " + sumResult + "<br><hr>");
 
 
-// --- Question 4: Calculator function with arguments and operator ---
+// --- Question 4: Mini Calculator Function ---
 document.write("<h3>Question 4: Mini Calculator Function</h3>");
 function computeValue(n1, n2, operator) {
     var result;
@@ -53,7 +53,7 @@ var calcOp = prompt("Calculator: Enter operator (+, -, *, /, %):");
 computeValue(calcNum1, calcNum2, calcOp);
 
 
-// --- Question 5: Function to square an argument ---
+// --- Question 5: Square Function ---
 document.write("<h3>Question 5: Square Function</h3>");
 function squareNumber(x) {
     var sq = x * x;
@@ -63,7 +63,7 @@ var numToSquare = +prompt("Enter a number to square:");
 squareNumber(numToSquare);
 
 
-// --- Question 6: Function to compute factorial of a number ---
+// --- Question 6: Factorial Function ---
 document.write("<h3>Question 6: Factorial Function</h3>");
 function calculateFactorial(n) {
     if (n < 0) return "Undefined for negative numbers";
@@ -78,7 +78,7 @@ var factorialInput = +prompt("Enter an integer to find its factorial:");
 calculateFactorial(factorialInput);
 
 
-// --- Question 7: Function to display counting between start and end numbers ---
+// --- Question 7: Counting Display Function ---
 document.write("<h3>Question 7: Counting Display Function</h3>");
 function displayCounting(start, end) {
     document.write("Counting from " + start + " to " + end + ":<br>");
@@ -111,12 +111,13 @@ function calculateHypotenuse(base, perpendicular) {
     document.write("Hypotenuse: <b>" + hypotenuse.toFixed(2) + "</b><br><hr>");
     return hypotenuse;
 }
+// FIX: Prompts ko function call se bilkul pehle globally rakha hai
 var bInput = +prompt("Hypotenuse: Enter base value:");
 var pInput = +prompt("Hypotenuse: Enter perpendicular value:");
 calculateHypotenuse(bInput, pInput);
 
 
-// --- Question 9: Area of Rectangle (Value vs Variable Arguments) ---
+// --- Question 9: Area of Rectangle ---
 document.write("<h3>Question 9: Area of Rectangle</h3>");
 function calculateAreaOfRectangle(width, height) {
     var area = width * height;
@@ -127,6 +128,7 @@ document.write("<i>i. Arguments passed as direct values (5, 10):</i><br>");
 calculateAreaOfRectangle(5, 10);
 
 document.write("<br><i>ii. Arguments passed as variables from prompt:</i><br>");
+// FIX: Prompts ko function ke bahar banaya taake variable globally accessible ho
 var rectWidth = +prompt("Rectangle: Enter width:");
 var rectHeight = +prompt("Rectangle: Enter height:");
 calculateAreaOfRectangle(rectWidth, rectHeight);
